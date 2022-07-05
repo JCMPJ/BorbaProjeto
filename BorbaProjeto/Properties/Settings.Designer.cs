@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ProjetoBreno.Properties
+namespace BorbaProjeto.Properties
 {
 
 

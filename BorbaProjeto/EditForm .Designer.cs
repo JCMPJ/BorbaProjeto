@@ -1,4 +1,4 @@
-﻿namespace ProjetoBreno
+﻿namespace BorbaProjeto
 {
     partial class EditForm
     {
@@ -75,10 +75,14 @@
             this.lb_Reclamada = new System.Windows.Forms.Label();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.btnAbrirWord = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.BTN_Voltar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.lboxAcompanhantesReclamante.SuspendLayout();
             this.lboxAcompanhantesReclamada.SuspendLayout();
             this.contextMenuStrip2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnMontar
@@ -106,11 +110,13 @@
             // 
             // tbReclamante
             // 
+            this.tableLayoutPanel1.SetColumnSpan(this.tbReclamante, 3);
             resources.ApplyResources(this.tbReclamante, "tbReclamante");
             this.tbReclamante.Name = "tbReclamante";
             // 
             // tbReclamada
             // 
+            this.tableLayoutPanel1.SetColumnSpan(this.tbReclamada, 3);
             resources.ApplyResources(this.tbReclamada, "tbReclamada");
             this.tbReclamada.Name = "tbReclamada";
             // 
@@ -131,6 +137,7 @@
             // 
             // tbLocalVistoria
             // 
+            this.tableLayoutPanel1.SetColumnSpan(this.tbLocalVistoria, 3);
             resources.ApplyResources(this.tbLocalVistoria, "tbLocalVistoria");
             this.tbLocalVistoria.Name = "tbLocalVistoria";
             // 
@@ -256,7 +263,7 @@
             // 
             // btnInsLwReclamante
             // 
-            this.btnInsLwReclamante.Image = global::ProjetoBreno.Properties.Resources.icons8_arrows_24;
+            this.btnInsLwReclamante.Image = global::BorbaProjeto.Properties.Resources.icons8_arrows_24;
             resources.ApplyResources(this.btnInsLwReclamante, "btnInsLwReclamante");
             this.btnInsLwReclamante.Name = "btnInsLwReclamante";
             this.btnInsLwReclamante.UseVisualStyleBackColor = true;
@@ -264,7 +271,7 @@
             // 
             // btnInsLwReclamada
             // 
-            this.btnInsLwReclamada.Image = global::ProjetoBreno.Properties.Resources.icons8_arrows_24;
+            this.btnInsLwReclamada.Image = global::BorbaProjeto.Properties.Resources.icons8_arrows_24;
             resources.ApplyResources(this.btnInsLwReclamada, "btnInsLwReclamada");
             this.btnInsLwReclamada.Name = "btnInsLwReclamada";
             this.btnInsLwReclamada.UseVisualStyleBackColor = true;
@@ -376,10 +383,38 @@
             this.btnAbrirWord.UseVisualStyleBackColor = false;
             this.btnAbrirWord.Click += new System.EventHandler(this.btnAbrirWord_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::BorbaProjeto.Properties.Resources.logo_JC_3x4;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            // 
+            // BTN_Voltar
+            // 
+            this.BTN_Voltar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BTN_Voltar.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.BTN_Voltar, "BTN_Voltar");
+            this.BTN_Voltar.Image = global::BorbaProjeto.Properties.Resources.icons8_arrows_24_left;
+            this.BTN_Voltar.Name = "BTN_Voltar";
+            this.BTN_Voltar.UseVisualStyleBackColor = false;
+            this.BTN_Voltar.Click += new System.EventHandler(this.BTN_Voltar_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.Image = global::BorbaProjeto.Properties.Resources.icons8_arrows_24_left;
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // EditForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.BTN_Voltar);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnAbrirWord);
             this.Controls.Add(this.lb_Reclamada);
             this.Controls.Add(this.lb_Reclamante);
@@ -398,6 +433,7 @@
             this.lboxAcompanhantesReclamante.ResumeLayout(false);
             this.lboxAcompanhantesReclamada.ResumeLayout(false);
             this.contextMenuStrip2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -449,6 +485,9 @@
         private System.Windows.Forms.ToolStripMenuItem excluirReclamada;
         private System.Windows.Forms.ToolStripMenuItem smEditar;
         private System.Windows.Forms.Button btnAbrirWord;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button BTN_Voltar;
+        private System.Windows.Forms.Button button1;
     }
 }
 

@@ -13,7 +13,7 @@ using Microsoft.Data.Sqlite;
 using Word = Microsoft.Office.Interop.Word;
 using System.Text.RegularExpressions;
 
-namespace ProjetoBreno
+namespace BorbaProjeto
 {
     public partial class SearchForm : Form
     {

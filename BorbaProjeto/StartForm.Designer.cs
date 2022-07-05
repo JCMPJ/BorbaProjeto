@@ -1,4 +1,4 @@
-﻿namespace ProjetoBreno
+﻿namespace BorbaProjeto
 {
     partial class StartForm
     {
@@ -113,7 +113,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = global::ProjetoBreno.Properties.Resources.logo_JC;
+            this.pictureBox1.Image = global::BorbaProjeto.Properties.Resources.logo_JC;
             this.pictureBox1.Location = new System.Drawing.Point(114, 116);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(370, 302);

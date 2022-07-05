@@ -1,4 +1,4 @@
-﻿namespace ProjetoBreno
+﻿namespace BorbaProjeto
 {
     partial class Form_EditarAcompanhante
     {

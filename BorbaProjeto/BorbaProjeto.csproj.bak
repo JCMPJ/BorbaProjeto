@@ -200,6 +200,12 @@
   <ItemGroup>
     <None Include="Resources\logo_JC.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_JC_3x4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-arrows-24-left.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

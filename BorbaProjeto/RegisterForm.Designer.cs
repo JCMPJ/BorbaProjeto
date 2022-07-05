@@ -1,4 +1,4 @@
-﻿namespace ProjetoBreno
+﻿namespace BorbaProjeto
 {
     partial class RegisterForm
     {
@@ -57,8 +57,6 @@
             this.Funcao = new System.Windows.Forms.Label();
             this.tbFuncaoExercida = new System.Windows.Forms.TextBox();
             this.tbTesReclamante = new System.Windows.Forms.TextBox();
-            this.btnInsLwReclamante = new System.Windows.Forms.Button();
-            this.btnInsLwReclamada = new System.Windows.Forms.Button();
             this.tbTesReclamada = new System.Windows.Forms.TextBox();
             this.lboxReclamante = new System.Windows.Forms.ListBox();
             this.lboxAcompanhantesReclamante = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -74,11 +72,16 @@
             this.lb_Reclamante = new System.Windows.Forms.Label();
             this.lb_Reclamada = new System.Windows.Forms.Label();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.LB_Voltar = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnInsLwReclamada = new System.Windows.Forms.Button();
+            this.btnInsLwReclamante = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.lboxAcompanhantesReclamante.SuspendLayout();
             this.lboxAcompanhantesReclamada.SuspendLayout();
             this.contextMenuStrip2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnMontar
@@ -255,22 +258,6 @@
             this.tbTesReclamante.Name = "tbTesReclamante";
             this.tbTesReclamante.KeyDown += new System.Windows.Forms.KeyEventHandler(this.OnKeyDownHandler);
             // 
-            // btnInsLwReclamante
-            // 
-            this.btnInsLwReclamante.Image = global::ProjetoBreno.Properties.Resources.icons8_arrows_24;
-            resources.ApplyResources(this.btnInsLwReclamante, "btnInsLwReclamante");
-            this.btnInsLwReclamante.Name = "btnInsLwReclamante";
-            this.btnInsLwReclamante.UseVisualStyleBackColor = true;
-            this.btnInsLwReclamante.Click += new System.EventHandler(this.BTN_InsLwReclamante_Click);
-            // 
-            // btnInsLwReclamada
-            // 
-            this.btnInsLwReclamada.Image = global::ProjetoBreno.Properties.Resources.icons8_arrows_24;
-            resources.ApplyResources(this.btnInsLwReclamada, "btnInsLwReclamada");
-            this.btnInsLwReclamada.Name = "btnInsLwReclamada";
-            this.btnInsLwReclamada.UseVisualStyleBackColor = true;
-            this.btnInsLwReclamada.Click += new System.EventHandler(this.BTN_InsLwReclamada_Click);
-            // 
             // tbTesReclamada
             // 
             resources.ApplyResources(this.tbTesReclamada, "tbTesReclamada");
@@ -371,18 +358,52 @@
             resources.ApplyResources(this.contextMenuStrip2, "contextMenuStrip2");
             this.contextMenuStrip2.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.CMSI_EditarRemoverReclamada);
             // 
-            // LB_Voltar
+            // button1
             // 
-            resources.ApplyResources(this.LB_Voltar, "LB_Voltar");
-            this.LB_Voltar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LB_Voltar.Name = "LB_Voltar";
-            this.LB_Voltar.Click += new System.EventHandler(this.LB_Voltar_Click);
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.Image = global::BorbaProjeto.Properties.Resources.icons8_arrows_24_left;
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::BorbaProjeto.Properties.Resources.logo_JC_3x4;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnInsLwReclamada
+            // 
+            this.btnInsLwReclamada.Image = global::BorbaProjeto.Properties.Resources.icons8_arrows_24;
+            resources.ApplyResources(this.btnInsLwReclamada, "btnInsLwReclamada");
+            this.btnInsLwReclamada.Name = "btnInsLwReclamada";
+            this.btnInsLwReclamada.UseVisualStyleBackColor = true;
+            this.btnInsLwReclamada.Click += new System.EventHandler(this.BTN_InsLwReclamada_Click);
+            // 
+            // btnInsLwReclamante
+            // 
+            this.btnInsLwReclamante.Image = global::BorbaProjeto.Properties.Resources.icons8_arrows_24;
+            resources.ApplyResources(this.btnInsLwReclamante, "btnInsLwReclamante");
+            this.btnInsLwReclamante.Name = "btnInsLwReclamante";
+            this.btnInsLwReclamante.UseVisualStyleBackColor = true;
+            this.btnInsLwReclamante.Click += new System.EventHandler(this.BTN_InsLwReclamante_Click);
+            // 
+            // label10
+            // 
+            resources.ApplyResources(this.label10, "label10");
+            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label10.Name = "label10";
             // 
             // RegisterForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.LB_Voltar);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lb_Reclamada);
             this.Controls.Add(this.lb_Reclamante);
             this.Controls.Add(this.lboxReclamada);
@@ -402,6 +423,7 @@
             this.lboxAcompanhantesReclamante.ResumeLayout(false);
             this.lboxAcompanhantesReclamada.ResumeLayout(false);
             this.contextMenuStrip2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -452,7 +474,9 @@
         private System.Windows.Forms.ToolStripMenuItem editarReclamada;
         private System.Windows.Forms.ToolStripMenuItem excluirReclamada;
         private System.Windows.Forms.ToolStripMenuItem smEditar;
-        private System.Windows.Forms.Label LB_Voltar;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label10;
     }
 }
 

@@ -1,4 +1,4 @@
-﻿namespace ProjetoBreno
+﻿namespace BorbaProjeto
 {
     partial class SearchForm
     {
@@ -42,8 +42,11 @@
             this.dataEmissao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnEditarLaudo = new System.Windows.Forms.Button();
             this.LB_Voltar = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLaudos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // rbtnReclamada
@@ -184,12 +187,34 @@
             this.LB_Voltar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LB_Voltar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.LB_Voltar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.LB_Voltar.Location = new System.Drawing.Point(10, 10);
+            this.LB_Voltar.Location = new System.Drawing.Point(10, 440);
             this.LB_Voltar.Name = "LB_Voltar";
             this.LB_Voltar.Size = new System.Drawing.Size(73, 19);
             this.LB_Voltar.TabIndex = 39;
             this.LB_Voltar.Text = "VOLTAR";
             this.LB_Voltar.Click += new System.EventHandler(this.LB_Voltar_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::BorbaProjeto.Properties.Resources.logo_JC_3x4;
+            this.pictureBox1.Location = new System.Drawing.Point(10, 10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(52, 39);
+            this.pictureBox1.TabIndex = 40;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label3.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(300, 10);
+            this.label3.Name = "label3";
+            this.label3.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label3.Size = new System.Drawing.Size(379, 26);
+            this.label3.TabIndex = 41;
+            this.label3.Text = "Pesquisar em Laudos Cadastrados";
             // 
             // SearchForm
             // 
@@ -197,6 +222,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(944, 481);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.LB_Voltar);
             this.Controls.Add(this.btnEditarLaudo);
             this.Controls.Add(this.dgvLaudos);
@@ -213,6 +240,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLaudos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,5 +262,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeReclamada;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataEmissao;
         private System.Windows.Forms.Label LB_Voltar;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label3;
     }
 }

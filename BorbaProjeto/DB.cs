@@ -9,7 +9,7 @@ using System.Data.SQLite;
 using Microsoft.Data.Sqlite;
 using System.Windows.Forms;
 
-namespace ProjetoBreno
+namespace BorbaProjeto
 {
     class DB
     {
