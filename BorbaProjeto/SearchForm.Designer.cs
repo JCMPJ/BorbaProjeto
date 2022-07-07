@@ -235,7 +235,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SearchForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Laudo Pericial - Pesquizar";
+            this.Text = "Laudo Pericial - Pesquisar";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SearchForm_FormClosing);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

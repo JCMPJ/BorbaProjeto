@@ -132,6 +132,7 @@ namespace BorbaProjeto
                     }
 
                     documento.SaveAs(path + "\\novo-documento.docx");
+                    documento.Dispose();
                 }
             }
             catch (Exception ex)

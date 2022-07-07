@@ -109,11 +109,13 @@
             // 
             // tbReclamante
             // 
+            this.tableLayoutPanel1.SetColumnSpan(this.tbReclamante, 3);
             resources.ApplyResources(this.tbReclamante, "tbReclamante");
             this.tbReclamante.Name = "tbReclamante";
             // 
             // tbReclamada
             // 
+            this.tableLayoutPanel1.SetColumnSpan(this.tbReclamada, 3);
             resources.ApplyResources(this.tbReclamada, "tbReclamada");
             this.tbReclamada.Name = "tbReclamada";
             // 

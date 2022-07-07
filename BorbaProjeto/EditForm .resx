@@ -930,6 +930,18 @@
   <metadata name="lboxAcompanhantesReclamante.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>16, 12</value>
   </metadata>
+  <data name="smEditar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 22</value>
+  </data>
+  <data name="smEditar.Text" xml:space="preserve">
+    <value>Editar</value>
+  </data>
+  <data name="smExcluir.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 22</value>
+  </data>
+  <data name="smExcluir.Text" xml:space="preserve">
+    <value>Excluir</value>
+  </data>
   <data name="lboxAcompanhantesReclamante.Size" type="System.Drawing.Size, System.Drawing">
     <value>110, 48</value>
   </data>
@@ -960,18 +972,6 @@
   <data name="&gt;&gt;lboxReclamante.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="smEditar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>109, 22</value>
-  </data>
-  <data name="smEditar.Text" xml:space="preserve">
-    <value>Editar</value>
-  </data>
-  <data name="smExcluir.Size" type="System.Drawing.Size, System.Drawing">
-    <value>109, 22</value>
-  </data>
-  <data name="smExcluir.Text" xml:space="preserve">
-    <value>Excluir</value>
-  </data>
   <data name="editarReclamante.Size" type="System.Drawing.Size, System.Drawing">
     <value>180, 22</value>
   </data>
@@ -987,6 +987,18 @@
   <metadata name="lboxAcompanhantesReclamada.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>277, 11</value>
   </metadata>
+  <data name="editarReclamada.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 22</value>
+  </data>
+  <data name="editarReclamada.Text" xml:space="preserve">
+    <value>Editar</value>
+  </data>
+  <data name="excluirReclamada.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 22</value>
+  </data>
+  <data name="excluirReclamada.Text" xml:space="preserve">
+    <value>Excluir</value>
+  </data>
   <data name="lboxAcompanhantesReclamada.Size" type="System.Drawing.Size, System.Drawing">
     <value>110, 48</value>
   </data>
@@ -1016,18 +1028,6 @@
   </data>
   <data name="&gt;&gt;lboxReclamada.ZOrder" xml:space="preserve">
     <value>8</value>
-  </data>
-  <data name="editarReclamada.Size" type="System.Drawing.Size, System.Drawing">
-    <value>109, 22</value>
-  </data>
-  <data name="editarReclamada.Text" xml:space="preserve">
-    <value>Editar</value>
-  </data>
-  <data name="excluirReclamada.Size" type="System.Drawing.Size, System.Drawing">
-    <value>109, 22</value>
-  </data>
-  <data name="excluirReclamada.Text" xml:space="preserve">
-    <value>Excluir</value>
   </data>
   <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
     <value>109, 22</value>

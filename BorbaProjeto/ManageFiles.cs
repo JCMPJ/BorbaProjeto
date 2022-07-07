@@ -57,6 +57,7 @@ namespace BorbaProjeto
             }
             catch (Exception e)
             {
+                MessageBox.Show(e.Message + "\nErro ao tentar criar a pasta\npara salvar o arquivo!", "Error!", 0, MessageBoxIcon.Exclamation);
                 Console.WriteLine("Não foi possível criar o diretório: {0}\n", e.Message);
                 return null;
             }

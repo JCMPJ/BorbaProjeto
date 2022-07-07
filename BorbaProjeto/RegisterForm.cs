@@ -89,6 +89,7 @@ namespace BorbaProjeto
                     }
 
                     documento.SaveAs(appPath + "\\novo-documento.docx");
+                    documento.Dispose();                    
                 }
             }
             catch (Exception ex)
@@ -211,13 +212,15 @@ namespace BorbaProjeto
             {
                 // Abre a janela Salvar Arquivo do Windows
                 // oDoc.Save();
-                oDoc.SaveAs2(path_str + nome_doc);
+                // Object strFileFormat = "wdFormatDocumentDefault";
+                oDoc.SaveAs(path_str + nome_doc);
                 oWord.Visible = true;
                 oDoc = null;
+                MessageBox.Show("Arquivo salvo\n" + path_str + nome_doc);
             }
             catch (Exception e)
             {
-                DialogResult dialogResult = MessageBox.Show(e.Message,"Error!",0,MessageBoxIcon.Exclamation);
+                MessageBox.Show(e.Message,"Error!",0,MessageBoxIcon.Exclamation);
                 oDoc = null;
             }
         }
