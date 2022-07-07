@@ -255,7 +255,7 @@ namespace BorbaProjeto
             {
                 // Abre a janela Salvar Arquivo do Windows
                 // oDoc.Save();
-                oDoc.SaveAs2(path_str + nome_doc);
+                oDoc.SaveAs(path_str + nome_doc);
                 oWord.Visible = true;
                 oDoc = null;
             }
