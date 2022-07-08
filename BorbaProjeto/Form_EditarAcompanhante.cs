@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BorbaProjeto
@@ -14,12 +8,12 @@ namespace BorbaProjeto
     {
 
         private static readonly string empty = string.Empty;
-        string nomeNovo = empty;        
+        string nomeNovo = empty;
         readonly string nomeVelho = empty;
         readonly ListBox lbo;
         readonly List<string> lis;
         readonly RegisterForm form1;
-        
+
 
         public Form_EditarAcompanhante(string nome, RegisterForm parent, ListBox lb, List<string> li)
         {
@@ -36,7 +30,7 @@ namespace BorbaProjeto
         {
             nomeNovo = tb_EditarAcompanhante.Text;
             Close();
-        }        
+        }
 
         private void BTN_CancelAcompanhante_Click(object sender, EventArgs e)
         {

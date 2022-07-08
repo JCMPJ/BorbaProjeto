@@ -1,11 +1,4 @@
-﻿using System;
-using System.IO;
-using System.Text.RegularExpressions;
-using System.Windows.Forms;
-using Xceed.Words.NET;
-using Word = Microsoft.Office.Interop.Word;
-
-namespace BorbaProjeto
+﻿namespace BorbaProjeto
 {
     class Laudo
     {

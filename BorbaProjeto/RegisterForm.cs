@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.IO;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using Xceed.Words.NET;
@@ -34,7 +32,7 @@ namespace BorbaProjeto
             string data;
             string hora;
             string datahora;
-            */            
+            */
             try
             {
                 using (DocX documento = DocX.Load(appPath + "\\modelo-v01.docx"))
@@ -42,7 +40,7 @@ namespace BorbaProjeto
                     tx = tbProcesso.Text;
                     laudo.numProcesso = tx.Replace(',', '.');
                     documento.ReplaceText("#numProcesso", tx.Replace(',', '.'));
-                    
+
                     tx = tbReclamante.Text;
                     laudo.nomeReclamante = tx.ToUpper();
                     documento.ReplaceText("#nomeReclamante", tx.ToUpper());
@@ -62,7 +60,7 @@ namespace BorbaProjeto
                     documento.ReplaceText("#inicioPeriodoReclamado", tbDataIniPeriodo.Text);
                     laudo.dataInicioPeriodoReclamado = tbDataIniPeriodo.Text;
                     documento.ReplaceText("#fimPeriodoReclamado", tbDataFimPeriodo.Text);
-                    laudo.dataFimPeriodoReclamado = tbDataFimPeriodo.Text;                    
+                    laudo.dataFimPeriodoReclamado = tbDataFimPeriodo.Text;
                     tx = tbFuncaoExercida.Text;
                     laudo.funcaoExercida = tx.ToUpper();
                     documento.ReplaceText("#FUNCAO", tx.ToUpper());
@@ -81,7 +79,7 @@ namespace BorbaProjeto
                         strmes = meses[Int32.Parse(mes)];
                         ano = arrDMA[2];
                         data = $"{tbCidadeEmissao.Text}, {dia} de {strmes} de {ano}";
-                        
+
                         laudo.cidadeEmissao = tbCidadeEmissao.Text;
                         laudo.dataEmissao = dma;
 
@@ -89,7 +87,7 @@ namespace BorbaProjeto
                     }
 
                     documento.SaveAs(appPath + "\\novo-documento.docx");
-                    documento.Dispose();                    
+                    documento.Dispose();
                 }
             }
             catch (Exception ex)
@@ -167,7 +165,7 @@ namespace BorbaProjeto
             }
             /* Formato ("d") 25/3/2022 */
             DateTime thisDay = DateTime.Today;
-            
+
             Regex rgx = new Regex("/");
             string data = rgx.Replace(thisDay.ToString("d"), "");
 
@@ -178,7 +176,7 @@ namespace BorbaProjeto
 
             // Salva o novo laudo no banco de dados
             DB.CreateNew(laudo);
-            
+
             /*
              * Montar o mone do arquivo último id gravado no banco mais um + número do processo +
              * data atual na forma ddmmaaa
@@ -194,7 +192,7 @@ namespace BorbaProjeto
             {
                 sequential_number = "0" + sequential_number;
             }
-            
+
             /* Monta nome do documento número sequencial + número do processo + data no formato ddmmaaaa */
             string nome_doc = sequential_number + "-" + tbProcesso.Text.Replace(',', '.') + "-" + data + ".docx";
 
@@ -210,17 +208,23 @@ namespace BorbaProjeto
             /* Salva o documento com o nome montado na pasta \laudos\número do processo */
             try
             {
+                /* Abre o WORD MESMO ANTES DE SALVAR
+                 * tentativa de corrigir o erro em outro PC
+                 */
+                oWord.Visible = true;
+
                 // Abre a janela Salvar Arquivo do Windows
                 // oDoc.Save();
+
                 // Object strFileFormat = "wdFormatDocumentDefault";
                 oDoc.SaveAs(path_str + nome_doc);
-                oWord.Visible = true;
+
                 oDoc = null;
                 MessageBox.Show("Arquivo salvo\n" + path_str + nome_doc);
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message,"Error!",0,MessageBoxIcon.Exclamation);
+                MessageBox.Show(e.Message, "Error!", 0, MessageBoxIcon.Exclamation);
                 oDoc = null;
             }
         }
@@ -228,7 +232,7 @@ namespace BorbaProjeto
         private void OnKeyDownHandler(object sender, KeyEventArgs e)
         {
             if (e.KeyValue == 13)
-            {                
+            {
                 TextBox tb = (TextBox)sender;
                 string str = tb.Name;
                 if (str == "tbTesReclamante")
@@ -336,7 +340,7 @@ namespace BorbaProjeto
         private void Inicio(object sender, EventArgs e)
         {
             tbProcesso.Focus();
-        }        
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {

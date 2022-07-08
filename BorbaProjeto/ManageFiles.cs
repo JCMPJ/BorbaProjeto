@@ -1,10 +1,6 @@
 ﻿using System;
 using System.IO;
 using System.Windows.Forms;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BorbaProjeto
 {
@@ -34,14 +30,14 @@ namespace BorbaProjeto
                 return false;
             }
         }
-            
-        
+
+
         public static string CreateDirectories(string dirname)
         {
             string pasta = dirname;
             try
             {
-                
+
                 if (!Directory.Exists(pasta))
                 {
                     //try to create directory            

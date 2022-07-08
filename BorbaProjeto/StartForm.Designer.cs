@@ -78,21 +78,21 @@
             // abrirDocumentoToolStripMenuItem
             // 
             this.abrirDocumentoToolStripMenuItem.Name = "abrirDocumentoToolStripMenuItem";
-            this.abrirDocumentoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.abrirDocumentoToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.abrirDocumentoToolStripMenuItem.Text = "Novo";
             this.abrirDocumentoToolStripMenuItem.Click += new System.EventHandler(this.abrirDocumentoToolStripMenuItem_Click);
             // 
             // procurarToolStripMenuItem
             // 
             this.procurarToolStripMenuItem.Name = "procurarToolStripMenuItem";
-            this.procurarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.procurarToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.procurarToolStripMenuItem.Text = "Procurar";
             this.procurarToolStripMenuItem.Click += new System.EventHandler(this.procurarToolStripMenuItem_Click);
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
@@ -107,7 +107,7 @@
             // 
             this.pesquizarToolStripMenuItem.Name = "pesquizarToolStripMenuItem";
             this.pesquizarToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
-            this.pesquizarToolStripMenuItem.Text = "Pesquizar";
+            this.pesquizarToolStripMenuItem.Text = "Pesquisar";
             this.pesquizarToolStripMenuItem.Click += new System.EventHandler(this.pesquizarToolStripMenuItem_Click);
             // 
             // pictureBox1

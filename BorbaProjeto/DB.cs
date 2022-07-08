@@ -1,12 +1,6 @@
 ﻿using System;
-using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data;
 using System.Data.SQLite;
-using Microsoft.Data.Sqlite;
 using System.Windows.Forms;
 
 namespace BorbaProjeto
@@ -54,13 +48,13 @@ namespace BorbaProjeto
             //SQLiteDataAdapter da;
 
             try
-            {                
+            {
                 var db = DB.Conectar();
                 SQLiteCommand cmd = db.CreateCommand();
                 cmd.CommandText = @"SELECT * FROM laudos WHERE id = '" + id + "'";
                 SQLiteDataAdapter da = new SQLiteDataAdapter(cmd.CommandText, Conectar());
                 da.Fill(dt);
-                
+
                 return dt;
             }
             catch (Exception ex)
@@ -100,7 +94,7 @@ namespace BorbaProjeto
                 cmd.Parameters.AddWithValue("@dataCriacao", laudo.dataCriacao);
                 cmd.Parameters.AddWithValue("@acompanhantesReclamante", laudo.acompanhantesReclamante);
                 cmd.Parameters.AddWithValue("@acompanhantesReclamada", laudo.acompanhantesReclamada);
-                
+
 
                 cmd.Prepare();
                 cmd.ExecuteNonQuery();

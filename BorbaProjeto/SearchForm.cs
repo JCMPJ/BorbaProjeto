@@ -1,17 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Data.SQLite;
-using System.IO;
-using Microsoft.Data.Sqlite;
-using Word = Microsoft.Office.Interop.Word;
 using System.Text.RegularExpressions;
+using System.Windows.Forms;
+using Word = Microsoft.Office.Interop.Word;
 
 namespace BorbaProjeto
 {
@@ -65,7 +56,7 @@ namespace BorbaProjeto
                 }
 
                 sql = $"SELECT id, numProcesso, nomeReclamante, nomeReclamada, dataEmissao FROM laudos WHERE {campo} LIKE '{nome}%'";
-                
+
                 dt = DB.SelectFromSql(sql);
                 //dt = DB.Listar();
                 if (!Object.ReferenceEquals(dt, null))
@@ -87,7 +78,7 @@ namespace BorbaProjeto
                         dt.Clear();
                         dgvLaudos.DataSource = dt;
                     }
-                }                
+                }
             }
             else
             {
@@ -159,7 +150,7 @@ namespace BorbaProjeto
                 //sequential_number = Convert.ToString(id);
                 sequential_number = str_id.Trim();
                 int idBd = int.Parse(str_id);
-                
+
                 if (idBd < 10)
                 {
                     sequential_number = "00" + sequential_number;
@@ -182,17 +173,17 @@ namespace BorbaProjeto
                 Word._Document oDoc;
                 oWord = new Word.Application();
                 try
-                {                    
+                {
                     oDoc = oWord.Documents.Add(ref oTemplate, ref oMissing, ref oMissing, ref oMissing);
                     // oDoc.Saved = true;
                     // Abre o documento no Word
                     oWord.Visible = true;
                 }
-                catch(Exception e)
+                catch (Exception e)
                 {
                     Console.WriteLine(e.Message);
                 }
-               
+
             }
             else
             {
@@ -208,7 +199,7 @@ namespace BorbaProjeto
                 editForm.ShowDialog();
                 flag = false;
             }
-            
+
         }
 
         private void LB_Voltar_Click(object sender, EventArgs e)

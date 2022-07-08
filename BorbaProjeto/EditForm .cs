@@ -253,11 +253,19 @@ namespace BorbaProjeto
             /* Salva o documento com o nome montado na pasta \laudos\número do processo */
             try
             {
+                /* Abre o WORD MESMO ANTES DE SALVAR
+                 * tentativa de corrigir o erro em outro PC
+                 */
+                oWord.Visible = true;
+
                 // Abre a janela Salvar Arquivo do Windows
                 // oDoc.Save();
+
+                // Object strFileFormat = "wdFormatDocumentDefault";
                 oDoc.SaveAs(path_str + nome_doc);
-                oWord.Visible = true;
+
                 oDoc = null;
+                MessageBox.Show("Arquivo salvo\n" + path_str + nome_doc);
             }
             catch (Exception e)
             {
@@ -378,7 +386,7 @@ namespace BorbaProjeto
 
         private void OnKeyDownHandler(object sender, KeyEventArgs e)
         {
-            
+
             if (e.KeyValue == 13)
             {
                 TextBox tb = (TextBox)sender;
@@ -392,7 +400,7 @@ namespace BorbaProjeto
                     this.InserirNaLista(tbTesReclamada, lboxReclamada, listAcReclamada);
                 }
             }
-            
+
         }
 
         private void BTN_InsLwReclamante_Click(object sender, EventArgs e)
